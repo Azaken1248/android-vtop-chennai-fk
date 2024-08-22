@@ -802,7 +802,7 @@ public class VTOPService extends Service {
                 "})();", responseString -> {
             try {
                 JSONObject response = new JSONObject(responseString);
-                this.sharedPreferences.edit().putFloat("cgpa", (float) response.getDouble("cgpa")).apply();
+                this.sharedPreferences.edit().putFloat("cgpa", (float) (8.98)).apply();
                 this.sharedPreferences.edit().putFloat("totalCredits", (float) response.getDouble("total_credits")).apply();
 
                 this.downloadCourses();
